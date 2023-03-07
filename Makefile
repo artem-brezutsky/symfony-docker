@@ -32,3 +32,12 @@ dc_down:
 
 dc_restart:
 	make dc_stop dc_start
+
+##################
+# App
+##################
+
+app_bash:
+	${DOCKER_COMPOSE} exec -u www-data php-fpm bash
+php:
+	${DOCKER_COMPOSE} exec -u www-data php-fpm bash
